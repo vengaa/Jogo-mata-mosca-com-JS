@@ -4,6 +4,22 @@ var largura = 0
 var vidas = 5
 var tempo = 5
 
+var criaMosquitoTempo = 2000
+
+var nivel = window.location.search
+nivel = nivel.replace('?','')
+
+if (nivel === 'normal') {
+	// 2000
+	var criaMosquitoTempo = 2000
+}else if (nivel === 'dificil'){
+	// 1000
+	var criaMosquitoTempo = 1000
+}else if (nivel === 'hard') {
+	// 750
+	var criaMosquitoTempo = 750
+}
+
 function ajustaTamanhoPalcoJogo() {
 	altura = window.innerHeight
 	largura = window.innerWidth
